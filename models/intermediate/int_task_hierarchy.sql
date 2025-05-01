@@ -1,4 +1,3 @@
-{{ config(materialized='ephemeral') }}
 
 with recursive task_cte as (
   -- Anchor: start with tasks that have no parent

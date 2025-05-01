@@ -1,4 +1,6 @@
-{{ config(materialized='view') }}
+{{ config(
+    tags=['projects']
+) }}
 
 select
     name,

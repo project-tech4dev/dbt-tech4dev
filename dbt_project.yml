@@ -35,6 +35,10 @@ flags:
 # files using the `{{ config(...) }}` macro.
 models:
   tech4dev:
+    staging:
+      schema: staging
+      materialized: table
+      +dbt-osmosis: "staging_schema.yml"
     intermediate:
       schema: intermediate
       materialized: table
