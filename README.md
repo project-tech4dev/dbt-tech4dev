@@ -1,6 +1,5 @@
-Welcome to your new dbt project!
 
-### Using the starter project
+### dbt Tech4dev
 
 Try running the following commands:
 - dbt run
