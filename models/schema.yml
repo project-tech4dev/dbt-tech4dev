@@ -1,0 +1,20 @@
+sources:
+  - name: erp_next
+    schema: staging
+    tables:
+      - name: tabTask
+        identifier: tabTask
+        description: "Project tasks"
+      - name: tabProject
+        identifier: tabProject
+        description: "Projects"
+        data_tests:
+          - elementary.schema_changes: 
+              config:
+                severity: error
+          - elementary.volume_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
+          - elementary.freshness_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
