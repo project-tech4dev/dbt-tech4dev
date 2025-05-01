@@ -1,5 +1,5 @@
 
-### dbt Tech4dev
+### DBT Tech4dev
 
 Try running the following commands:
 - dbt run
