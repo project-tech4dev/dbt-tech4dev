@@ -1,3 +1,5 @@
+version: 2
+
 sources:
   - name: erp_next
     schema: staging
@@ -8,6 +10,9 @@ sources:
       - name: tabProject
         identifier: tabProject
         description: "Projects"
+      - name: tabResource_Time_Allocation
+        identifier: tabResource_Time_Allocation
+        description: "Resource Time Allocation"
         data_tests:
           - elementary.schema_changes: 
               config:
