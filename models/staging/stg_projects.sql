@@ -4,7 +4,7 @@
 
 select
     name,
-    project_name as project,
+    project_name,
     status,
     expected_start_date,
     expected_end_date
