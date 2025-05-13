@@ -4,6 +4,11 @@ sources:
   - name: erp_next
     schema: staging
     tables:
+
+      - name: tabMonthly_Digest
+        identifier: tabMonthly_Digest
+        description: Project tasks
+
       - name: tabTask
         identifier: tabTask
         description: Project tasks
