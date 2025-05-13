@@ -6,15 +6,269 @@ sources:
     tables:
       - name: tabTask
         identifier: tabTask
-        description: "Project tasks"
+        description: Project tasks
+        columns:
+          - name: idx
+            description: Index of the task
+          - name: lft
+            description: Left value in nested set model
+          - name: rgt
+            description: Right value in nested set model
+          - name: name
+            type: character varying
+            description: Unique identifier for the task
+          - name: type
+            description: Type of task
+          - name: _seen
+            description: Seen status of the task
+          - name: color
+            description: Color code for the task
+          - name: issue
+            description: Associated issue with the task
+          - name: owner
+            description: Owner of the task
+          - name: start
+            description: Start date of the task
+          - name: status
+            type: character varying
+            description: Current status of the task
+          - name: _assign
+            description: Assigned user(s) for the task
+          - name: company
+            description: Company associated with the task
+          - name: project
+            type: character varying
+            description: Associated project identifier
+          - name: subject
+            type: character varying
+            description: Task subject/title
+          - name: creation
+            description: Creation timestamp of the task
+          - name: duration
+            description: Duration of the task
+          - name: is_group
+            description: Indicates if the task is a group
+          - name: modified
+            description: Last modified timestamp of the task
+          - name: priority
+            type: character varying
+            description: Task priority level
+          - name: progress
+            type: numeric(38,9)
+            description: Task completion progress
+          - name: _comments
+            description: Comments on the task
+          - name: _liked_by
+            description: Users who liked the task
+          - name: docstatus
+            description: Document status of the task
+          - name: _user_tags
+            description: User tags associated with the task
+          - name: department
+            type: character varying
+            description: Associated department
+          - name: old_parent
+            description: Previous parent task
+          - name: actual_time
+            type: numeric(38,9)
+            description: Actual time spent on task
+          - name: description
+            description: Description of the task
+          - name: is_template
+            description: Indicates if the task is a template
+          - name: modified_by
+            description: User who last modified the task
+          - name: parent_task
+            type: character varying
+            description: Parent task identifier
+          - name: review_date
+            description: Review date of the task
+          - name: task_weight
+            description: Weight or importance of the task
+          - name: act_end_date
+            description: Actual end date of the task
+          - name: closing_date
+            description: Closing date of the task
+          - name: completed_by
+            description: User who completed the task
+          - name: completed_on
+            description: Date when the task was completed
+          - name: custom_notes
+            description: Custom notes for the task
+          - name: exp_end_date
+            type: date
+            description: Expected end date
+          - name: is_milestone
+            description: Indicates if the task is a milestone
+          - name: expected_time
+            type: numeric(38,9)
+            description: Expected time for task completion
+          - name: template_task
+            description: Template task reference
+          - name: act_start_date
+            description: Actual start date of the task
+          - name: exp_start_date
+            type: date
+            description: Expected start date
+          - name: custom_employee
+            description: Custom employee assigned to the task
+          - name: depends_on_tasks
+            description: Tasks that this task depends on
+          - name: custom_is_critical
+            description: Indicates if the task is critical
+          - name: total_expense_claim
+            description: Total expense claim for the task
+          - name: custom_employee_name
+            description: Name of the custom employee
+          - name: total_billing_amount
+            description: Total billing amount for the task
+          - name: total_costing_amount
+            description: Total costing amount for the task
+          - name: _airbyte_raw_id
+            description: Airbyte raw ID for the task
+          - name: _airbyte_extracted_at
+            description: Timestamp when the task was extracted by Airbyte
+          - name: _airbyte_meta
+            description: Airbyte metadata for the task
       - name: tabProject
         identifier: tabProject
-        description: "Projects"
+        description: Projects
+        columns:
+          - name: idx
+            description: Index of the record
+          - name: name
+            type: character varying
+            description: Unique identifier for the project
+          - name: _seen
+            description: Indicator if the project has been seen
+          - name: notes
+            description: Notes related to the project
+          - name: owner
+            description: Owner of the project
+          - name: status
+            type: character varying
+            description: Current status of the project
+          - name: _assign
+            description: Assigned users for the project
+          - name: company
+            description: Company associated with the project
+          - name: message
+            description: Messages related to the project
+          - name: to_time
+            description: End time of the project
+          - name: creation
+            description: Creation timestamp of the project
+          - name: customer
+            description: Customer associated with the project
+          - name: modified
+            description: Last modified timestamp of the project
+          - name: priority
+            type: character varying
+            description: Project priority level
+          - name: _comments
+            description: Comments on the project
+          - name: _liked_by
+            description: Users who liked the project
+          - name: docstatus
+            description: Document status of the project
+          - name: frequency
+            description: Frequency of the project updates
+          - name: from_time
+            description: Start time of the project
+          - name: is_active
+            description: Indicator if the project is active
+          - name: _user_tags
+            description: User tags associated with the project
+          - name: department
+            type: character varying
+            description: Associated department
+          - name: actual_time
+            description: Actual time spent on the project
+          - name: copied_from
+            description: Source project if copied
+          - name: cost_center
+            description: Cost center associated with the project
+          - name: day_to_send
+            description: Day to send project updates
+          - name: first_email
+            description: First email related to the project
+          - name: modified_by
+            description: User who last modified the project
+          - name: sales_order
+            description: Sales order associated with the project
+          - name: gross_margin
+            description: Gross margin of the project
+          - name: holiday_list
+            description: Holiday list affecting the project
+          - name: project_name
+            type: character varying
+            description: Name of the project
+          - name: project_type
+            description: Type of the project
+          - name: second_email
+            description: Second email related to the project
+          - name: naming_series
+            description: Naming series for the project
+          - name: custom_product
+            description: Custom product associated with the project
+          - name: actual_end_date
+            description: Actual end date of the project
+          - name: custom_contract
+            description: Custom contract details for the project
+          - name: collect_progress
+            description: Progress collection method for the project
+          - name: per_gross_margin
+            description: Percentage of gross margin for the project
+          - name: percent_complete
+            type: numeric(38,9)
+            description: Project completion percentage
+          - name: project_template
+            description: Template used for the project
+          - name: actual_start_date
+            description: Actual start date of the project
+          - name: estimated_costing
+            description: Estimated costing for the project
+          - name: expected_end_date
+            type: date
+            description: Expected project end date
+          - name: daily_time_to_send
+            description: Daily time to send project updates
+          - name: total_sales_amount
+            description: Total sales amount for the project
+          - name: custom_product_type
+            description: Type of custom product for the project
+          - name: expected_start_date
+            type: date
+            description: Expected project start date
+          - name: total_billed_amount
+            description: Total billed amount for the project
+          - name: total_expense_claim
+            description: Total expense claim for the project
+          - name: total_purchase_cost
+            description: Total purchase cost for the project
+          - name: weekly_time_to_send
+            description: Weekly time to send project updates
+          - name: total_costing_amount
+            description: Total costing amount for the project
+          - name: custom_budgeted_hours
+            description: Custom budgeted hours for the project
+          - name: total_billable_amount
+            description: Total billable amount for the project
+          - name: percent_complete_method
+            description: Method to calculate percent completion
+          - name: total_consumed_material_cost
+            description: Total consumed material cost for the project
+          - name: _airbyte_raw_id
+            description: Airbyte raw ID for the project data
+          - name: _airbyte_extracted_at
+            description: Timestamp when data was extracted by Airbyte
+          - name: _airbyte_meta
+            description: Metadata related to Airbyte extraction
       - name: tabResource_Time_Allocation
         identifier: tabResource_Time_Allocation
-        description: "Resource Time Allocation"
+        description: Resource Time Allocation
         data_tests:
-          - elementary.schema_changes: 
+          - elementary.schema_changes:
               config:
                 severity: error
           - elementary.volume_anomalies:
@@ -23,3 +277,66 @@ sources:
           - elementary.freshness_anomalies:
               timestamp_column: _airbyte_extracted_at
               anomaly_sensitivity: 3
+        columns:
+          - name: idx
+            description: Index of the record
+          - name: name
+            type: character varying
+            description: Unique identifier for the allocation
+          - name: year
+            type: bigint
+            description: Year of allocation
+          - name: month
+            type: character varying
+            description: Month of allocation
+          - name: owner
+            description: Owner of the record
+          - name: _assign
+            description: Assignment details
+          - name: creation
+            description: Creation timestamp of the record
+          - name: employee
+            type: character varying
+            description: Employee identifier
+          - name: modified
+            description: Last modified timestamp
+          - name: _comments
+            description: Comments on the record
+          - name: _liked_by
+            description: Users who liked the record
+          - name: docstatus
+            description: Document status
+          - name: _user_tags
+            description: User tags associated with the record
+          - name: department
+            type: character varying
+            description: Department name
+          - name: modified_by
+            description: User who last modified the record
+          - name: total_hours
+            type: numeric(38,9)
+            description: Total allocated hours
+          - name: amended_from
+            description: Reference to the amended record
+          - name: balance_hours
+            type: numeric(38,9)
+            description: Remaining balance hours
+          - name: employee_name
+            type: character varying
+            description: Name of the employee
+          - name: total_capacity
+            type: bigint
+            description: Total capacity in hours
+          - name: month_start_date
+            type: date
+            description: Start date of the allocation period
+          - name: balance_available
+            description: Available balance
+          - name: balanuce_available
+            description: Typographical error for balance available
+          - name: _airbyte_raw_id
+            description: Airbyte raw ID for the record
+          - name: _airbyte_extracted_at
+            description: Timestamp when data was extracted by Airbyte
+          - name: _airbyte_meta
+            description: Metadata from Airbyte

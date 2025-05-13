@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: resource_allocation_metrics
+    columns:
+      - name: month_start_date
+        description: Start date of the allocation period
+      - name: month_end_date
+        description: The end date of the allocation period for a specific month.
+      - name: department
+        description: Department name
+      - name: employee_name
+        description: Name of the employee
+      - name: utilized_hours
+        description: The total hours utilized by a resource within a given allocation period.
+      - name: balance_hours
+        description: Remaining balance hours
+      - name: total_capacity
+        description: Total capacity in hours
+      - name: utilization_percentage
+        description: >-
+          The percentage of allocated hours utilized out of the total capacity for a given resource within
+          the specified period.
+      - name: dept_employee_count
+        description: Number of employees in the department for the given allocation period.
+      - name: dept_utilized_hours
+        description: The number of hours utilized by a department during the allocation period.
+      - name: dept_balance_hours
+        description: Remaining balance hours for the department within the allocation period.
+      - name: dept_total_capacity
+        description: Total capacity in hours for the department within the specified period.
+      - name: dept_avg_utilization
+        description: >-
+          Average utilization percentage of resources for a department within a specific period.
+    description: >-
+      The "resource_allocation_metrics" table provides monthly metrics on resource allocation, including
+      start and end dates, department and employee details, utilized hours, balance hours, total capacity,
+      utilization percentages, and departmental aggregates.

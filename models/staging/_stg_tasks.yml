@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: stg_tasks
+    columns:
+      - name: name
+        description: Unique identifier for the task
+      - name: subject
+        description: Task subject/title
+      - name: status
+        description: Current status of the task
+      - name: project
+        description: Associated project identifier
+      - name: parent_task
+        description: Parent task identifier
+    description: >-
+      A table containing project tasks with details such as unique task identifier, task subject/title,
+      current status, associated project, and parent task information.
