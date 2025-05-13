@@ -9,6 +9,8 @@ with recursive task_cte as (
     t.name,
     t.subject,
     t.status,
+    t.predecessor,
+    t.successor,
     p.project_name,
     t.parent_task,
     array[t.subject] as path
@@ -23,6 +25,8 @@ with recursive task_cte as (
     t.name,
     t.subject,
     t.status,
+    t.predecessor,
+    t.successor,
     p.project_name,
     t.parent_task,
     cte.path || t.subject

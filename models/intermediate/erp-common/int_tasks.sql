@@ -4,6 +4,8 @@
 
 select
     name,
+    lft as predecessor,
+    rgt as successor,
     subject,
     status,
     project,

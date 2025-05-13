@@ -30,7 +30,9 @@ select
   case when array_length(t.path, 1) >= 3 then t.path[3] end as "level_3",
   case when array_length(t.path, 1) >= 4 then t.path[4] end as "level_4",
   t.status,
-  t.project_name as project,
+  t.predecessor,
+  t.successor,
+  t.project_name,
   round(coalesce(ac.avg_completion, 
          case when t.status = 'Completed' then 100.0 else 0.0 end), 2) as "completion_float"
 from {{ ref('int_task_hierarchy') }} t
