@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_tasks
+  - name: int_tasks
     columns:
       - name: name
         description: Unique identifier for the task

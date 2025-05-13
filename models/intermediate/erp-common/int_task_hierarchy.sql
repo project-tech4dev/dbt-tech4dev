@@ -1,4 +1,8 @@
 
+{{ config(
+    tags=['projects']
+) }}
+
 with recursive task_cte as (
   -- Anchor: start with tasks that have no parent
   select
@@ -8,8 +12,8 @@ with recursive task_cte as (
     p.project_name,
     t.parent_task,
     array[t.subject] as path
-  from {{ ref('stg_tasks') }} t
-  join {{ ref('stg_projects') }} p on t.project = p.name
+  from {{ ref('int_tasks') }} t
+  join {{ ref('int_projects') }} p on t.project = p.name
   where t.parent_task is null
 
   union all
@@ -22,8 +26,8 @@ with recursive task_cte as (
     p.project_name,
     t.parent_task,
     cte.path || t.subject
-  from {{ ref('stg_tasks') }} t
-  join {{ ref('stg_projects') }} p on t.project = p.name
+  from {{ ref('int_tasks') }} t
+  join {{ ref('int_projects') }} p on t.project = p.name
   join task_cte cte on t.parent_task = cte.name
 )
 

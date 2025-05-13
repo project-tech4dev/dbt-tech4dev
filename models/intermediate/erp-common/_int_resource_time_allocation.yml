@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_resource_time_allocation
+  - name: int_resource_time_allocation
     columns:
       - name: idx
         description: Unique identifier for the allocation.
@@ -30,6 +30,6 @@ models:
       - name: month_end_date
         description: The end date of the allocation period for a specific month.
     description: >-
-      The "stg_resource_time_allocation" table provides a detailed overview of resource time allocations,
+      The "int_resource_time_allocation" table provides a detailed overview of resource time allocations,
       including unique identifiers, employee details, department information, and time-based metrics such
       as total and balance hours, capacity, and allocation periods.

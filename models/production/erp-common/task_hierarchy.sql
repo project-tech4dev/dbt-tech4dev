@@ -1,3 +1,6 @@
+{{ config(
+    tags=['projects']
+) }}
 
 with leaf_completion as (
   select
@@ -5,7 +8,7 @@ with leaf_completion as (
     case when t.status = 'Completed' then 100.0 else 0.0 end as leaf_completion
   from {{ ref('int_task_hierarchy') }} t
   where not exists (
-    select 1 from {{ ref('stg_tasks') }} t2
+    select 1 from {{ ref('int_tasks') }} t2
     where t2.parent_task = t.name
   )
 ),

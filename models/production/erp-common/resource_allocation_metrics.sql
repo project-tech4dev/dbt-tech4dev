@@ -1,3 +1,7 @@
+{{ config(
+    tags=['projects']
+) }}
+
 with monthly_allocation as (
     select
         month_start_date,
@@ -9,7 +13,7 @@ with monthly_allocation as (
         total_capacity,
         -- Calculate utilization percentage based on total capacity
         round((total_hours / nullif(total_capacity, 0)) * 100, 2) as utilization_percentage
-    from {{ ref('stg_resource_time_allocation') }}
+    from {{ ref('int_resource_time_allocation') }}
 ),
 
 department_summary as (

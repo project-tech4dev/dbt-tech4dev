@@ -1,3 +1,7 @@
+{{ config(
+    tags=['projects']
+) }}
+
 with source as (
     select
         idx,

@@ -1,5 +1,5 @@
 {{ config(
-    tags=['tasks']
+    tags=['projects']
 ) }}
 
 select
