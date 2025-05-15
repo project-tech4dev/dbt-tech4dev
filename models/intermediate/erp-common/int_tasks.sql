@@ -9,5 +9,6 @@ select
     subject,
     status,
     project,
+    description,
     parent_task
 from {{ source('erp_next','tabTask') }}

@@ -1,5 +1,5 @@
 {{ config(
-    tags=['projects']
+    tags=['projects1']
 ) }}
 
 select * from {{ ref('int_projects') }}
