@@ -345,3 +345,16 @@ sources:
             description: Timestamp when data was extracted by Airbyte
           - name: _airbyte_meta
             description: Metadata from Airbyte
+      - name: resource_allocation
+        identifier: tabHours_Allocation_Table
+        description: Resource Hours Allocation by project and employee
+        data_tests:
+          - elementary.schema_changes:
+              config:
+                severity: error
+          - elementary.volume_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
+          - elementary.freshness_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
