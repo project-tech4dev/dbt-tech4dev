@@ -18,6 +18,9 @@ with source as (
         docstatus,
         modified_by
     from {{ source('erp_next', 'resource_allocation') }}
+-- skip all cancelled items
+    where docstatus != 2 
+
 )
 
 select 
