@@ -9,6 +9,14 @@ sources:
         identifier: tabMonthly_Digest
         description: Project tasks
 
+      - name: tabFocus_Area_Table
+        identifier: tabFocus_Area_Table
+        description: Focus Areas of a project
+
+      - name: tabEmployee
+        identifier: tabEmployee
+        description: Employee details
+
       - name: tabTask
         identifier: tabTask
         description: Project tasks
