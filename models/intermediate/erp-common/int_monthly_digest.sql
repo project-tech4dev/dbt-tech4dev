@@ -3,34 +3,37 @@
 ) }}
 
 WITH source AS (
-
     SELECT
         *
     FROM
-        {{ source(
-            'erp_next',
-            'tabMonthly_Digest'
-        ) }}
+        {{ source('erp_next', 'tabMonthly_Digest') }}
         -- raw table
+),
+projects AS (
+    SELECT
+        name,
+        project_name
+    FROM
+        {{ source('erp_next', 'tabProject') }}
 )
 SELECT
-    project,
-    project_name,
-    product_type,
-    MONTH,
-    YEAR,
-    hours_spend,
-    hours_committed,
-    highlights,
-    challenges,
-    unplanned_work,
-    plan_next_month,
-    lessons_learned,
-    last_edited_time,
-    creation_time,
+    s.project,
+    p.project_name,
+    s.product_type,
+    s.MONTH,
+    s.YEAR,
+    s.hours_spend,
+    s.hours_committed,
+    s.highlights,
+    s.challenges,
+    s.unplanned_work,
+    s.plan_next_month,
+    s.lessons_learned,
+    s.last_edited_time,
+    s.creation_time,
     MAKE_DATE(
-        YEAR::INTEGER,
-        CASE MONTH
+        s.YEAR::INTEGER,
+        CASE s.MONTH
             WHEN 'Jan' THEN 1
             WHEN 'Feb' THEN 2
             WHEN 'Mar' THEN 3
@@ -47,10 +50,8 @@ SELECT
         1
     ) AS report_date
 FROM
-    source
+    source s
+    LEFT JOIN projects p ON s.project = p.name
 WHERE
-    COALESCE(
-        docstatus,
-        0
-    ) = 1 -- keep only “submitted” rows
-    AND YEAR > 2020
+    COALESCE(s.docstatus, 0) = 1 -- keep only “submitted” rows
+    AND s.YEAR > 2020
