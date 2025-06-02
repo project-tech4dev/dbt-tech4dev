@@ -366,3 +366,32 @@ sources:
           - elementary.freshness_anomalies:
               timestamp_column: _airbyte_extracted_at
               anomaly_sensitivity: 3
+  
+  - name: staging_dalgo
+    schema: staging_dalgo
+    tables:
+
+      - name: consulting_time_tracker
+        identifier: consulting_time_tracker
+        description: Contains breakdown of dalgo consulting work
+      
+      - name: support_issues_tracker
+        identifier: support_issues_tracker
+        description: Contains details on support issues raised by dalgo clients
+  
+  - name: staging_zoho
+    schema: staging_zoho
+    tables:
+      - name: campaign_recipients
+        identifier: campaign_recipients
+        description: Contains all the sent campaign emails and recipients
+      - name: campaign_reports
+        identifier: campaign_reports
+        description: Contains stats on sent out campaign emails
+      - name: recent_campaigns
+        identifier: recent_campaigns
+        description: Contains campaign details
+      
+      - name: mailing_lists
+        identifier: mailing_lists
+        description: Contains all the mailing lists for T4D
