@@ -53,5 +53,7 @@ FROM
     source s
     LEFT JOIN projects p ON s.project = p.name
 WHERE
+    /* removing submitted row logic as doctype has been fixed
     COALESCE(s.docstatus, 0) = 1 -- keep only “submitted” rows
-    AND s.YEAR > 2020
+    AND */
+    s.YEAR > 2020
