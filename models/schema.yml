@@ -378,6 +378,22 @@ sources:
       - name: support_issues_tracker
         identifier: support_issues_tracker
         description: Contains details on support issues raised by dalgo clients
+      
+      - name: follower_statistics
+        identifier: follower_statistics
+        description: Linkedin Follower Statistics - segment wise breakdown
+      
+      - name: share_statistics
+        identifier: share_statistics
+        description: Linkedin share statistics
+      
+      - name: organization_lookup
+        identifier: organization_lookup
+        description: Linkedin Organization Details
+      
+      - name: total_follower_count
+        identifier: total_follower_count
+        description: Total Follower Count on Linked in
   
   - name: staging_zoho
     schema: staging_zoho
