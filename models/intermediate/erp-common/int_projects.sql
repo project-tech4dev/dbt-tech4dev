@@ -5,6 +5,7 @@
 select
     p.name,
     p.project_name,
+    p.custom_product as product_type,
     p.status,
     e.employee_name as owner,
     p.expected_start_date,
@@ -22,6 +23,7 @@ left join {{ source('erp_next','tabFocus_Area_Table') }} f
 group by
     p.name,
     p.project_name,
+    p.custom_product,
     p.status,
     e.employee_name,
     p.expected_start_date,
