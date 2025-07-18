@@ -7,7 +7,7 @@ select
     p.project_name,
     p.status,
     e.employee_name as owner,
-    p.expected_start_date
+    p.expected_start_date,
     p.expected_end_date,
     to_char(p.expected_start_date, 'DD-MM-YYYY') as expected_start_date_text,
     to_char(p.expected_end_date, 'DD-MM-YYYY') as expected_end_date_text,
