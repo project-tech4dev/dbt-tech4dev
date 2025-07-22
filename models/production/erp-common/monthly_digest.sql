@@ -1,5 +1,5 @@
 {{ config(
-    tags = ['digests']
+    tags = ['projects']
 ) }}
 
 SELECT
