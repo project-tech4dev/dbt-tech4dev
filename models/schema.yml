@@ -366,6 +366,24 @@ sources:
           - elementary.freshness_anomalies:
               timestamp_column: _airbyte_extracted_at
               anomaly_sensitivity: 3
+
+      - name: fcxo_budget_actuals
+        identifier: fcxo_budget_actuals
+        description: fCxO revenue and expense actuals vs targets
+        data_tests:
+          - elementary.schema_changes:
+              config:
+                severity: error
+          - elementary.volume_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
+          - elementary.freshness_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
+        quoting:
+          database: false
+          schema: false
+          identifier: true
   
   - name: staging_dalgo
     schema: staging_dalgo
