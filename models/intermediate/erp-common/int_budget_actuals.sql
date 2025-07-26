@@ -5,7 +5,7 @@
 with unpivoted as (
 
     {{ dbt_utils.unpivot(
-        relation=source('erp_next', 'fcxo_budget_actuals'),
+        relation=source('erp_next', 'budget_actuals'),
         cast_to='text',
         exclude=['item', 'product_type','_airbyte_raw_id','_airbyte_extracted_at','_airbyte_meta' ],
         field_name='raw_financial_label',

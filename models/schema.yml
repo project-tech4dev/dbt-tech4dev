@@ -367,9 +367,23 @@ sources:
               timestamp_column: _airbyte_extracted_at
               anomaly_sensitivity: 3
 
-      - name: fcxo_budget_actuals
-        identifier: fcxo_budget_actuals
-        description: fCxO revenue and expense actuals vs targets
+      - name: sales_invoice
+        identifier: tabSales_Invoice
+        description: Sales Invoices
+        data_tests:
+          - elementary.schema_changes:
+              config:
+                severity: error
+          - elementary.volume_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
+          - elementary.freshness_anomalies:
+              timestamp_column: _airbyte_extracted_at
+              anomaly_sensitivity: 3
+
+      - name: budget_actuals
+        identifier: budget_actuals
+        description: Revenue and expense actuals vs targets
         data_tests:
           - elementary.schema_changes:
               config:

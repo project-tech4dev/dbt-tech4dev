@@ -13,7 +13,7 @@ unpivoted_actuals AS (
         product_type,
         item,
         amount
-    FROM {{ ref('int_fcxo_budget_actuals') }}
+    FROM {{ ref('int_budget_actuals') }}
 ),
 
 pivoted_actuals AS (
