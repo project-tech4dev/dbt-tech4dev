@@ -38,14 +38,14 @@ models:
     staging:
       schema: staging
       materialized: table
-      +dbt-osmosis: "_{model}.yml"
+      +dbt-osmosis: "{parent}.yml"
     intermediate:
       schema: intermediate
       materialized: table
-      +dbt-osmosis: "_{model}.yml"
+      +dbt-osmosis: "{parent}.yml"
     production:
       schema: production
       materialized: table
-      +dbt-osmosis: "_{model}.yml"
+      +dbt-osmosis: "{parent}.yml"
   elementary:
     +schema: "elementary"
