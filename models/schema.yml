@@ -9,6 +9,18 @@ sources:
         identifier: tabMonthly_Digest
         description: Project tasks
 
+      - name: tabCustomer
+        identifier: tabCustomer
+        description: Customer details
+
+      - name: tabOpportunity
+        identifier: tabOpportunity
+        description: Opportunity details
+      
+      - name: tabProduct_Type_Table
+        identifier: tabProduct_Type_Table
+        description: Product types available for leads, opportunities, and projects
+
       - name: tabFocus_Area_Table
         identifier: tabFocus_Area_Table
         description: Focus Areas of a project
