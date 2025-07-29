@@ -33,7 +33,7 @@ opportunities_converted AS (
         COUNT(*) AS opportunities_converted
     FROM calendar cal
     JOIN {{ source('erp_next', 'tabOpportunity') }} o
-      ON o.modified::date BETWEEN cal.start_date AND cal.end_date
+      ON COALESCE(o.custom_conversion_date, o.modified)::date BETWEEN cal.start_date AND cal.end_date
       AND o.status = 'Converted'
     LEFT JOIN {{ source('erp_next', 'tabProduct_Type_Table') }} ptt
       ON ptt.parent = o.name

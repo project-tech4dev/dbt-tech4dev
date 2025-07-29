@@ -26,7 +26,7 @@ nps_scores AS (
         ) AS nps_score
     FROM calendar cal
     JOIN {{ source('erp_next', 'tabNPS_Survey') }} nps
-      ON nps.creation::date BETWEEN cal.start_date AND cal.end_date
+      ON nps.form_filled_date::date BETWEEN cal.start_date AND cal.end_date
     WHERE nps.recommend_program IS NOT NULL
       AND nps.recommend_program BETWEEN 1 AND 5
     GROUP BY cal.start_date, cal.end_date, cal.period_type
@@ -47,7 +47,7 @@ average_scores AS (
         ROUND(AVG(nps.satisfaction_value_add::NUMERIC), 2) AS avg_satisfaction_value_add
     FROM calendar cal
     JOIN {{ source('erp_next', 'tabNPS_Survey') }} nps
-      ON nps.creation::date BETWEEN cal.start_date AND cal.end_date
+      ON nps.form_filled_date::date BETWEEN cal.start_date AND cal.end_date
     WHERE nps.program_outreach IS NOT NULL
       OR nps.internal_capacity IS NOT NULL
       OR nps.confident_leverage IS NOT NULL
