@@ -9,6 +9,10 @@ sources:
         identifier: tabMonthly_Digest
         description: Project tasks
 
+      - name: tabNPS_Survey
+        identifier: tabNPS_Survey
+        description: NPS survey results
+
       - name: tabCustomer
         identifier: tabCustomer
         description: Customer details
