@@ -1,10 +1,106 @@
 version: 2
 models:
   - name: int_campaign_recipients
-    columns: []
+    columns:
+      - name: contactemailaddress
+        description: Email address of the recipient
+      - name: contactid
+        description: Unique identifier for the contact
+      - name: sent_time_ms
+        description: Timestamp in milliseconds when the campaign was sent
+      - name: sent_time
+        description: Converted timestamp when the campaign was sent
+      - name: contact_campaigns
+        description: Number of campaigns sent to this contact
   - name: int_campaign_reports
-    columns: []
+    columns:
+      - name: campaign_id
+        description: Unique identifier for the campaign
+      - name: emails_sent
+        description: Number of emails sent in the campaign
+      - name: opens
+        description: Number of email opens
+      - name: delivered
+        description: Number of emails delivered
+      - name: clicks
+        description: Number of unique clicks
+      - name: open_rate
+        description: Email open rate percentage
+      - name: delivery_rate
+        description: Email delivery rate percentage
+      - name: clickthrough_rate
+        description: Click-through rate percentage
   - name: int_campaigns
-    columns: []
+    columns:
+      - name: campaign_key
+        description: Unique key for the campaign
+      - name: campaign_name
+        description: Name of the campaign
+      - name: subject
+        description: Subject line of the campaign
+      - name: from_email
+        description: Sender email address
+      - name: campaign_status
+        description: Status of the campaign
+      - name: sent_time_ms
+        description: Timestamp in milliseconds when sent
+      - name: sent_time
+        description: Converted timestamp when sent
+      - name: org
+        description: Organization associated with the campaign
   - name: int_mailing_lists
-    columns: []
+    columns:
+      - name: sno
+        description: Serial number
+      - name: date
+        description: Date of the mailing list
+      - name: zoho_id
+        description: Zoho unique identifier
+      - name: owner
+        description: Owner of the mailing list
+      - name: is_smart
+        description: Indicates if it's a smart list
+      - name: list_dgs
+        description: List DGS identifier
+      - name: list_key
+        description: Unique key for the list
+      - name: sent_count
+        description: Number of emails sent to this list
+      - name: editable
+        description: Whether the list is editable
+      - name: list_name
+        description: Name of the mailing list
+      - name: deletable
+        description: Whether the list can be deleted
+      - name: is_public
+        description: Whether the list is public
+      - name: list_unique_id_no
+        description: Unique ID number for the list
+      - name: lock_status
+        description: Lock status of the list
+      - name: service_type
+        description: Type of service
+      - name: created_time
+        description: Raw creation time
+      - name: created_time_gmt
+        description: Raw creation time in GMT
+      - name: updated_time_gmt
+        description: Raw updated time in GMT
+      - name: created_time_ts
+        description: Converted creation timestamp
+      - name: created_time_gmt_ts
+        description: Converted creation timestamp in GMT
+      - name: updated_time_gmt_ts
+        description: Converted updated timestamp in GMT
+      - name: no_of_contacts
+        description: Number of contacts in the list
+      - name: no_of_subscribers_cnt
+        description: Number of subscribers
+      - name: no_of_bounce_cnt
+        description: Number of bounced emails
+      - name: list_created_date
+        description: Date when the list was created
+      - name: list_created_time
+        description: Time when the list was created
+      - name: list_campaigns_count
+        description: Number of campaigns sent to this list

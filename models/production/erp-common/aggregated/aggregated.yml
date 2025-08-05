@@ -1,10 +1,100 @@
 version: 2
 models:
   - name: kpi_nps_survey
-    columns: []
+    columns:
+      - name: start_date
+        description: Start date of the period
+      - name: end_date
+        description: End date of the period
+      - name: period_type
+        description: Type of period (quarter or year)
+      - name: financial_label
+        description: Financial period label
+      - name: sort_order
+        description: Sort order for chronological arrangement
+      - name: nps_total_responses
+        description: Total number of NPS survey responses
+      - name: nps_promoters
+        description: Number of promoters (score 5)
+      - name: nps_neutrals
+        description: Number of neutrals (score 3-4)
+      - name: nps_detractors
+        description: Number of detractors (score 1-2)
+      - name: nps_score
+        description: Net Promoter Score (promoters % - detractors %)
+      - name: survey_total_responses
+        description: Total survey responses for average scores
+      - name: avg_program_outreach
+        description: Average score for program outreach
+      - name: avg_internal_capacity
+        description: Average score for internal capacity
+      - name: avg_confident_leverage
+        description: Average score for confident leverage
+      - name: avg_improved_efficiency
+        description: Average score for improved efficiency
+      - name: avg_technology_innovation
+        description: Average score for technology innovation
+      - name: avg_satisfaction_value_add
+        description: Average score for satisfaction value add
   - name: kpi_opportunities
-    columns: []
+    columns:
+      - name: start_date
+        description: Start date of the period
+      - name: end_date
+        description: End date of the period
+      - name: period_type
+        description: Type of period (quarter or year)
+      - name: financial_label
+        description: Financial period label
+      - name: sort_order
+        description: Sort order for chronological arrangement
+      - name: product_type
+        description: Product type associated with opportunities
+      - name: opportunities_created
+        description: Number of opportunities created in the period
+      - name: opportunities_converted
+        description: Number of opportunities converted in the period
   - name: kpi_financials
-    columns: []
+    columns:
+      - name: start_date
+        description: Start date of the period
+      - name: end_date
+        description: End date of the period
+      - name: financial_label
+        description: Financial period label
+      - name: period_type
+        description: Type of period (quarter or year)
+      - name: product_type
+        description: Product type for financial metrics
+      - name: sort_order
+        description: Sort order for chronological arrangement
+      - name: actual_revenue
+        description: Actual revenue achieved
+      - name: target_revenue
+        description: Target revenue for the period
+      - name: actual_expenses
+        description: Actual expenses incurred
+      - name: sustainability
+        description: Revenue to expenses ratio
+      - name: target_revenue_met
+        description: Percentage of target revenue achieved
   - name: kpi_projects
-    columns: []
+    columns:
+      - name: start_date
+        description: Start date of the period
+      - name: end_date
+        description: End date of the period
+      - name: period_type
+        description: Type of period (quarter or year)
+      - name: financial_label
+        description: Financial period label
+      - name: sort_order
+        description: Sort order for chronological arrangement
+      - name: product_type
+        description: Product type associated with projects
+      - name: projects_started
+        description: Number of projects started in the period
+      - name: projects_ongoing
+        description: Number of projects ongoing during the period
+      - name: projects_ended
+        description: Number of projects ended in the period

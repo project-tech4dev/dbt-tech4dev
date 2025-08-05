@@ -1,8 +1,92 @@
 version: 2
 models:
   - name: consulting_tracker
-    columns: []
+    columns:
+      - name: start_date
+        description: Start date of the consulting engagement
+      - name: end_date
+        description: End date of the consulting engagement
+      - name: consultant
+        description: Name of the consultant
+      - name: ngo
+        description: NGO being consulted
+      - name: project_program
+        description: Project or program name
+      - name: category
+        description: Category of consulting work
+      - name: dashboard
+        description: Dashboard information
+      - name: description
+        description: Description of the consulting work
+      - name: hours_spent
+        description: Number of hours spent on consulting
+      - name: billing_status
+        description: Billing status of the consulting work
+      - name: num_charts_made
+        description: Number of charts created
+      - name: attendees
+        description: Attendees of the consulting session
+      - name: json_blob
+        description: Additional data in JSON format
   - name: support_issues
-    columns: []
+    columns:
+      - name: support_issue_id
+        description: Unique identifier for the support issue
+      - name: reporting_day
+        description: Date when the issue was reported
+      - name: resolution_day
+        description: Date when the issue was resolved
+      - name: raised_by
+        description: Person who raised the issue
+      - name: assigned_to
+        description: Person assigned to resolve the issue
+      - name: ngo
+        description: NGO related to the support issue
+      - name: status
+        description: Current status of the support issue
+      - name: description
+        description: Description of the support issue
+      - name: hours_spent
+        description: Number of hours spent resolving the issue
   - name: linkedin_stats
-    columns: []
+    columns:
+      - name: id
+        description: Internal ID of the organization
+      - name: org_name
+        description: Name of the organization
+      - name: logo_url
+        description: URL of the organization logo
+      - name: website_url
+        description: Website URL of the organization
+      - name: localized_name
+        description: Localized name of the organization
+      - name: vanity_name
+        description: Vanity name of the organization
+      - name: organization_type
+        description: Type of organization
+      - name: primary_organization_type
+        description: Primary organization type
+      - name: staff_count_range
+        description: Staff count range of the organization
+      - name: description
+        description: Description of the organization
+      - name: like_count
+        description: Number of likes on shared content
+      - name: click_count
+        description: Number of clicks on shared content
+      - name: engagement
+        description: Engagement rate of shared content
+      - name: share_count
+        description: Number of shares of the content
+      - name: comment_count
+        description: Number of comments on shared content
+      - name: impression_count
+        description: Number of impressions of shared content
+      - name: unique_impressions_count
+        description: Number of unique impressions
+      - name: share_mentions_count
+        description: Number of mentions in shares
+      - name: comment_mentions_count
+        description: Number of mentions in comments
+      - name: total_followers
+        description: Total number of LinkedIn followers

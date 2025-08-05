@@ -1,4 +1,14 @@
 version: 2
 models:
   - name: calendar
-    columns: []
+    columns:
+      - name: start_date
+        description: Start date of the period
+      - name: end_date
+        description: End date of the period
+      - name: period_type
+        description: Type of period (quarter or year)
+      - name: financial_label
+        description: Financial period label (e.g., Q1 FY22, FY22)
+      - name: sort_order
+        description: Sort order for chronological arrangement

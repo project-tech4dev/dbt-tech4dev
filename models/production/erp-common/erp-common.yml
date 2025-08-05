@@ -1,11 +1,35 @@
 version: 2
 models:
   - name: opportunities
-    columns: []
+    columns:
+      - name: name
+        description: Unique identifier for the opportunity
+      - name: opportunity_type
+        description: Type of opportunity
+      - name: status
+        description: Current status of the opportunity
+      - name: creation_date
+        description: Date when the opportunity was created
+      - name: creation_timestamp
+        description: Timestamp when the opportunity was created
+      - name: product_type
+        description: Product type associated with the opportunity
   - name: monthly_digest
     columns: []
   - name: sales_invoice
-    columns: []
+    columns:
+      - name: product_type
+        description: Product type of the invoice
+      - name: name
+        description: Invoice identifier
+      - name: customer
+        description: Customer associated with the invoice
+      - name: status
+        description: Current status of the invoice
+      - name: due_date
+        description: Due date for the invoice payment
+      - name: outstanding_amount
+        description: Outstanding amount on the invoice
   - name: projects
     columns:
       - name: name
@@ -30,6 +54,36 @@ models:
           tags: []
       - name: expected_end_date
         description: Expected project end date
+        config:
+          meta: {}
+          tags: []
+      - name: product_type
+        description: Product type of the project
+        config:
+          meta: {}
+          tags: []
+      - name: contract_status
+        description: Contract status of the project
+        config:
+          meta: {}
+          tags: []
+      - name: owner
+        description: Owner/manager of the project
+        config:
+          meta: {}
+          tags: []
+      - name: expected_start_date_text
+        description: Expected start date in text format
+        config:
+          meta: {}
+          tags: []
+      - name: expected_end_date_text
+        description: Expected end date in text format
+        config:
+          meta: {}
+          tags: []
+      - name: focus_areas
+        description: Focus areas of the project
         config:
           meta: {}
           tags: []
@@ -131,27 +185,33 @@ models:
         config:
           meta: {}
           tags: []
-      - name: level_3
-        description: >-
-          Indicates the third level in the task hierarchy, representing a sub-category or further breakdown
-          of tasks within a project.
-        config:
-          meta: {}
-          tags: []
-      - name: level_4
-        description: >-
-          Fourth level in the task hierarchy, representing sub-tasks or components within the broader
-          task structure.
-        config:
-          meta: {}
-          tags: []
       - name: status
         description: Current status of the task
         config:
           meta: {}
           tags: []
-      - name: project
-        description: Associated project identifier
+      - name: predecessor
+        description: Predecessor task in the workflow
+        config:
+          meta: {}
+          tags: []
+      - name: successor
+        description: Successor task in the workflow
+        config:
+          meta: {}
+          tags: []
+      - name: project_name
+        description: Name of the associated project
+        config:
+          meta: {}
+          tags: []
+      - name: description
+        description: Description of the task
+        config:
+          meta: {}
+          tags: []
+      - name: extracted_link
+        description: URL extracted from the task description
         config:
           meta: {}
           tags: []
@@ -165,6 +225,72 @@ models:
       A table containing hierarchical task data with levels indicating the structure of tasks, their current
       status, associated project, and a float representing task completion.
   - name: resource_allocation
-    columns: []
+    columns:
+      - name: idx
+        description: Unique index identifier
+      - name: name
+        description: Resource allocation identifier
+      - name: hours
+        description: Allocated hours
+      - name: month
+        description: Month of allocation
+      - name: product
+        description: Product associated with allocation
+      - name: project
+        description: Project identifier
+      - name: project_name
+        description: Name of the project
+      - name: activity
+        description: Activity description
+      - name: owner
+        description: Owner of the allocation
+      - name: modified_date
+        description: Date when allocation was last modified
+      - name: parent
+        description: Parent allocation identifier
+      - name: docstatus
+        description: Document status
+      - name: modified_by
+        description: User who last modified the allocation
+      - name: total_capacity
+        description: Total capacity in hours
+      - name: month_start_date
+        description: Start date of the allocation month
+      - name: employee_name
+        description: Name of the employee
   - name: monthly_digest
-    columns: []
+    columns:
+      - name: project
+        description: Project identifier
+      - name: project_name
+        description: Name of the project
+      - name: status
+        description: Current status of the project
+      - name: product_type
+        description: Product type of the project
+      - name: month
+        description: Month of the digest
+      - name: year
+        description: Year of the digest
+      - name: hours_spend
+        description: Hours spent on the project
+      - name: hours_committed
+        description: Hours committed to the project
+      - name: highlights
+        description: Project highlights for the month
+      - name: challenges
+        description: Challenges faced during the month
+      - name: unplanned_work
+        description: Unplanned work completed
+      - name: plan_next_month
+        description: Plans for the next month
+      - name: lessons_learned
+        description: Lessons learned during the month
+      - name: last_edited_time
+        description: Last time the digest was edited
+      - name: creation_time
+        description: Time when the digest was created
+      - name: report_date
+        description: Date of the monthly report
+      - name: is_most_recent
+        description: Indicates if this is the most recent digest for the project
