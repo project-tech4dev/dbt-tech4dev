@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: newsletter_contact_summary
+    columns: []
+  - name: campaign_metrics_per_newsletter
+    columns: []
+  - name: mailing_lists
+    columns: []

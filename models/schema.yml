@@ -9,290 +9,645 @@ sources:
         identifier: tabMonthly_Digest
         description: Project tasks
 
+        columns: []
       - name: tabNPS_Survey
         identifier: tabNPS_Survey
         description: NPS survey results
 
+        columns: []
       - name: tabCustomer
         identifier: tabCustomer
         description: Customer details
 
+        columns: []
       - name: tabOpportunity
         identifier: tabOpportunity
         description: Opportunity details
-      
+
+        columns: []
       - name: tabProduct_Type_Table
         identifier: tabProduct_Type_Table
         description: Product types available for leads, opportunities, and projects
 
+        columns: []
       - name: tabFocus_Area_Table
         identifier: tabFocus_Area_Table
         description: Focus Areas of a project
 
+        columns: []
       - name: tabEmployee
         identifier: tabEmployee
         description: Employee details
 
+        columns: []
       - name: tabTask
         identifier: tabTask
         description: Project tasks
         columns:
           - name: idx
             description: Index of the task
+            config:
+              meta: {}
+              tags: []
           - name: lft
             description: Left value in nested set model
+            config:
+              meta: {}
+              tags: []
           - name: rgt
             description: Right value in nested set model
+            config:
+              meta: {}
+              tags: []
           - name: name
             type: character varying
             description: Unique identifier for the task
+            config:
+              meta: {}
+              tags: []
           - name: type
             description: Type of task
+            config:
+              meta: {}
+              tags: []
           - name: _seen
             description: Seen status of the task
+            config:
+              meta: {}
+              tags: []
           - name: color
             description: Color code for the task
+            config:
+              meta: {}
+              tags: []
           - name: issue
             description: Associated issue with the task
+            config:
+              meta: {}
+              tags: []
           - name: owner
             description: Owner of the task
+            config:
+              meta: {}
+              tags: []
           - name: start
             description: Start date of the task
+            config:
+              meta: {}
+              tags: []
           - name: status
             type: character varying
             description: Current status of the task
+            config:
+              meta: {}
+              tags: []
           - name: _assign
             description: Assigned user(s) for the task
+            config:
+              meta: {}
+              tags: []
           - name: company
             description: Company associated with the task
+            config:
+              meta: {}
+              tags: []
           - name: project
             type: character varying
             description: Associated project identifier
+            config:
+              meta: {}
+              tags: []
           - name: subject
             type: character varying
             description: Task subject/title
+            config:
+              meta: {}
+              tags: []
           - name: creation
             description: Creation timestamp of the task
+            config:
+              meta: {}
+              tags: []
           - name: duration
             description: Duration of the task
+            config:
+              meta: {}
+              tags: []
           - name: is_group
             description: Indicates if the task is a group
+            config:
+              meta: {}
+              tags: []
           - name: modified
             description: Last modified timestamp of the task
+            config:
+              meta: {}
+              tags: []
           - name: priority
             type: character varying
             description: Task priority level
+            config:
+              meta: {}
+              tags: []
           - name: progress
             type: numeric(38,9)
             description: Task completion progress
+            config:
+              meta: {}
+              tags: []
           - name: _comments
             description: Comments on the task
+            config:
+              meta: {}
+              tags: []
           - name: _liked_by
             description: Users who liked the task
+            config:
+              meta: {}
+              tags: []
           - name: docstatus
             description: Document status of the task
+            config:
+              meta: {}
+              tags: []
           - name: _user_tags
             description: User tags associated with the task
+            config:
+              meta: {}
+              tags: []
           - name: department
             type: character varying
             description: Associated department
+            config:
+              meta: {}
+              tags: []
           - name: old_parent
             description: Previous parent task
+            config:
+              meta: {}
+              tags: []
           - name: actual_time
             type: numeric(38,9)
             description: Actual time spent on task
+            config:
+              meta: {}
+              tags: []
           - name: description
             description: Description of the task
+            config:
+              meta: {}
+              tags: []
           - name: is_template
             description: Indicates if the task is a template
+            config:
+              meta: {}
+              tags: []
           - name: modified_by
             description: User who last modified the task
+            config:
+              meta: {}
+              tags: []
           - name: parent_task
             type: character varying
             description: Parent task identifier
+            config:
+              meta: {}
+              tags: []
           - name: review_date
             description: Review date of the task
+            config:
+              meta: {}
+              tags: []
           - name: task_weight
             description: Weight or importance of the task
+            config:
+              meta: {}
+              tags: []
           - name: act_end_date
             description: Actual end date of the task
+            config:
+              meta: {}
+              tags: []
           - name: closing_date
             description: Closing date of the task
+            config:
+              meta: {}
+              tags: []
           - name: completed_by
             description: User who completed the task
+            config:
+              meta: {}
+              tags: []
           - name: completed_on
             description: Date when the task was completed
+            config:
+              meta: {}
+              tags: []
           - name: custom_notes
             description: Custom notes for the task
+            config:
+              meta: {}
+              tags: []
           - name: exp_end_date
             type: date
             description: Expected end date
+            config:
+              meta: {}
+              tags: []
           - name: is_milestone
             description: Indicates if the task is a milestone
+            config:
+              meta: {}
+              tags: []
           - name: expected_time
             type: numeric(38,9)
             description: Expected time for task completion
+            config:
+              meta: {}
+              tags: []
           - name: template_task
             description: Template task reference
+            config:
+              meta: {}
+              tags: []
           - name: act_start_date
             description: Actual start date of the task
+            config:
+              meta: {}
+              tags: []
           - name: exp_start_date
             type: date
             description: Expected start date
+            config:
+              meta: {}
+              tags: []
           - name: custom_employee
             description: Custom employee assigned to the task
+            config:
+              meta: {}
+              tags: []
           - name: depends_on_tasks
             description: Tasks that this task depends on
+            config:
+              meta: {}
+              tags: []
           - name: custom_is_critical
             description: Indicates if the task is critical
+            config:
+              meta: {}
+              tags: []
           - name: total_expense_claim
             description: Total expense claim for the task
+            config:
+              meta: {}
+              tags: []
           - name: custom_employee_name
             description: Name of the custom employee
+            config:
+              meta: {}
+              tags: []
           - name: total_billing_amount
             description: Total billing amount for the task
+            config:
+              meta: {}
+              tags: []
           - name: total_costing_amount
             description: Total costing amount for the task
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_raw_id
             description: Airbyte raw ID for the task
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_extracted_at
             description: Timestamp when the task was extracted by Airbyte
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_meta
             description: Airbyte metadata for the task
+            config:
+              meta: {}
+              tags: []
       - name: tabProject
         identifier: tabProject
         description: Projects
         columns:
           - name: idx
             description: Index of the record
+            config:
+              meta: {}
+              tags: []
           - name: name
             type: character varying
             description: Unique identifier for the project
+            config:
+              meta: {}
+              tags: []
           - name: _seen
             description: Indicator if the project has been seen
+            config:
+              meta: {}
+              tags: []
           - name: notes
             description: Notes related to the project
+            config:
+              meta: {}
+              tags: []
           - name: owner
             description: Owner of the project
+            config:
+              meta: {}
+              tags: []
           - name: status
             type: character varying
             description: Current status of the project
+            config:
+              meta: {}
+              tags: []
           - name: _assign
             description: Assigned users for the project
+            config:
+              meta: {}
+              tags: []
           - name: company
             description: Company associated with the project
+            config:
+              meta: {}
+              tags: []
           - name: message
             description: Messages related to the project
+            config:
+              meta: {}
+              tags: []
           - name: to_time
             description: End time of the project
+            config:
+              meta: {}
+              tags: []
           - name: creation
             description: Creation timestamp of the project
+            config:
+              meta: {}
+              tags: []
           - name: customer
             description: Customer associated with the project
+            config:
+              meta: {}
+              tags: []
           - name: modified
             description: Last modified timestamp of the project
+            config:
+              meta: {}
+              tags: []
           - name: priority
             type: character varying
             description: Project priority level
+            config:
+              meta: {}
+              tags: []
           - name: _comments
             description: Comments on the project
+            config:
+              meta: {}
+              tags: []
           - name: _liked_by
             description: Users who liked the project
+            config:
+              meta: {}
+              tags: []
           - name: docstatus
             description: Document status of the project
+            config:
+              meta: {}
+              tags: []
           - name: frequency
             description: Frequency of the project updates
+            config:
+              meta: {}
+              tags: []
           - name: from_time
             description: Start time of the project
+            config:
+              meta: {}
+              tags: []
           - name: is_active
             description: Indicator if the project is active
+            config:
+              meta: {}
+              tags: []
           - name: _user_tags
             description: User tags associated with the project
+            config:
+              meta: {}
+              tags: []
           - name: department
             type: character varying
             description: Associated department
+            config:
+              meta: {}
+              tags: []
           - name: actual_time
             description: Actual time spent on the project
+            config:
+              meta: {}
+              tags: []
           - name: copied_from
             description: Source project if copied
+            config:
+              meta: {}
+              tags: []
           - name: cost_center
             description: Cost center associated with the project
+            config:
+              meta: {}
+              tags: []
           - name: day_to_send
             description: Day to send project updates
+            config:
+              meta: {}
+              tags: []
           - name: first_email
             description: First email related to the project
+            config:
+              meta: {}
+              tags: []
           - name: modified_by
             description: User who last modified the project
+            config:
+              meta: {}
+              tags: []
           - name: sales_order
             description: Sales order associated with the project
+            config:
+              meta: {}
+              tags: []
           - name: gross_margin
             description: Gross margin of the project
+            config:
+              meta: {}
+              tags: []
           - name: holiday_list
             description: Holiday list affecting the project
+            config:
+              meta: {}
+              tags: []
           - name: project_name
             type: character varying
             description: Name of the project
+            config:
+              meta: {}
+              tags: []
           - name: project_type
             description: Type of the project
+            config:
+              meta: {}
+              tags: []
           - name: second_email
             description: Second email related to the project
+            config:
+              meta: {}
+              tags: []
           - name: naming_series
             description: Naming series for the project
+            config:
+              meta: {}
+              tags: []
           - name: custom_product
             description: Custom product associated with the project
+            config:
+              meta: {}
+              tags: []
           - name: actual_end_date
             description: Actual end date of the project
+            config:
+              meta: {}
+              tags: []
           - name: custom_contract
             description: Custom contract details for the project
+            config:
+              meta: {}
+              tags: []
           - name: collect_progress
             description: Progress collection method for the project
+            config:
+              meta: {}
+              tags: []
           - name: per_gross_margin
             description: Percentage of gross margin for the project
+            config:
+              meta: {}
+              tags: []
           - name: percent_complete
             type: numeric(38,9)
             description: Project completion percentage
+            config:
+              meta: {}
+              tags: []
           - name: project_template
             description: Template used for the project
+            config:
+              meta: {}
+              tags: []
           - name: actual_start_date
             description: Actual start date of the project
+            config:
+              meta: {}
+              tags: []
           - name: estimated_costing
             description: Estimated costing for the project
+            config:
+              meta: {}
+              tags: []
           - name: expected_end_date
             type: date
             description: Expected project end date
+            config:
+              meta: {}
+              tags: []
           - name: daily_time_to_send
             description: Daily time to send project updates
+            config:
+              meta: {}
+              tags: []
           - name: total_sales_amount
             description: Total sales amount for the project
+            config:
+              meta: {}
+              tags: []
           - name: custom_product_type
             description: Type of custom product for the project
+            config:
+              meta: {}
+              tags: []
           - name: expected_start_date
             type: date
             description: Expected project start date
+            config:
+              meta: {}
+              tags: []
           - name: total_billed_amount
             description: Total billed amount for the project
+            config:
+              meta: {}
+              tags: []
           - name: total_expense_claim
             description: Total expense claim for the project
+            config:
+              meta: {}
+              tags: []
           - name: total_purchase_cost
             description: Total purchase cost for the project
+            config:
+              meta: {}
+              tags: []
           - name: weekly_time_to_send
             description: Weekly time to send project updates
+            config:
+              meta: {}
+              tags: []
           - name: total_costing_amount
             description: Total costing amount for the project
+            config:
+              meta: {}
+              tags: []
           - name: custom_budgeted_hours
             description: Custom budgeted hours for the project
+            config:
+              meta: {}
+              tags: []
           - name: total_billable_amount
             description: Total billable amount for the project
+            config:
+              meta: {}
+              tags: []
           - name: percent_complete_method
             description: Method to calculate percent completion
+            config:
+              meta: {}
+              tags: []
           - name: total_consumed_material_cost
             description: Total consumed material cost for the project
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_raw_id
             description: Airbyte raw ID for the project data
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_extracted_at
             description: Timestamp when data was extracted by Airbyte
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_meta
             description: Metadata related to Airbyte extraction
+            config:
+              meta: {}
+              tags: []
       - name: tabResource_Time_Allocation
         identifier: tabResource_Time_Allocation
         description: Resource Time Allocation
@@ -309,66 +664,144 @@ sources:
         columns:
           - name: idx
             description: Index of the record
+            config:
+              meta: {}
+              tags: []
           - name: name
             type: character varying
             description: Unique identifier for the allocation
+            config:
+              meta: {}
+              tags: []
           - name: year
             type: bigint
             description: Year of allocation
+            config:
+              meta: {}
+              tags: []
           - name: month
             type: character varying
             description: Month of allocation
+            config:
+              meta: {}
+              tags: []
           - name: owner
             description: Owner of the record
+            config:
+              meta: {}
+              tags: []
           - name: _assign
             description: Assignment details
+            config:
+              meta: {}
+              tags: []
           - name: creation
             description: Creation timestamp of the record
+            config:
+              meta: {}
+              tags: []
           - name: employee
             type: character varying
             description: Employee identifier
+            config:
+              meta: {}
+              tags: []
           - name: modified
             description: Last modified timestamp
+            config:
+              meta: {}
+              tags: []
           - name: _comments
             description: Comments on the record
+            config:
+              meta: {}
+              tags: []
           - name: _liked_by
             description: Users who liked the record
+            config:
+              meta: {}
+              tags: []
           - name: docstatus
             description: Document status
+            config:
+              meta: {}
+              tags: []
           - name: _user_tags
             description: User tags associated with the record
+            config:
+              meta: {}
+              tags: []
           - name: department
             type: character varying
             description: Department name
+            config:
+              meta: {}
+              tags: []
           - name: modified_by
             description: User who last modified the record
+            config:
+              meta: {}
+              tags: []
           - name: total_hours
             type: numeric(38,9)
             description: Total allocated hours
+            config:
+              meta: {}
+              tags: []
           - name: amended_from
             description: Reference to the amended record
+            config:
+              meta: {}
+              tags: []
           - name: balance_hours
             type: numeric(38,9)
             description: Remaining balance hours
+            config:
+              meta: {}
+              tags: []
           - name: employee_name
             type: character varying
             description: Name of the employee
+            config:
+              meta: {}
+              tags: []
           - name: total_capacity
             type: bigint
             description: Total capacity in hours
+            config:
+              meta: {}
+              tags: []
           - name: month_start_date
             type: date
             description: Start date of the allocation period
+            config:
+              meta: {}
+              tags: []
           - name: balance_available
             description: Available balance
+            config:
+              meta: {}
+              tags: []
           - name: balanuce_available
             description: Typographical error for balance available
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_raw_id
             description: Airbyte raw ID for the record
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_extracted_at
             description: Timestamp when data was extracted by Airbyte
+            config:
+              meta: {}
+              tags: []
           - name: _airbyte_meta
             description: Metadata from Airbyte
+            config:
+              meta: {}
+              tags: []
       - name: resource_allocation
         identifier: tabHours_Allocation_Table
         description: Resource Hours Allocation by project and employee
@@ -383,6 +816,7 @@ sources:
               timestamp_column: _airbyte_extracted_at
               anomaly_sensitivity: 3
 
+        columns: []
       - name: sales_invoice
         identifier: tabSales_Invoice
         description: Sales Invoices
@@ -397,6 +831,7 @@ sources:
               timestamp_column: _airbyte_extracted_at
               anomaly_sensitivity: 3
 
+        columns: []
       - name: budget_actuals
         identifier: budget_actuals
         description: Revenue and expense actuals vs targets
@@ -414,7 +849,8 @@ sources:
           database: false
           schema: false
           identifier: true
-  
+
+        columns: []
   - name: staging_dalgo
     schema: staging_dalgo
     tables:
@@ -422,40 +858,50 @@ sources:
       - name: consulting_time_tracker
         identifier: consulting_time_tracker
         description: Contains breakdown of dalgo consulting work
-      
+
+        columns: []
       - name: support_issues_tracker
         identifier: support_issues_tracker
         description: Contains details on support issues raised by dalgo clients
-      
+
+        columns: []
       - name: follower_statistics
         identifier: follower_statistics
         description: Linkedin Follower Statistics - segment wise breakdown
-      
+
+        columns: []
       - name: share_statistics
         identifier: share_statistics
         description: Linkedin share statistics
-      
+
+        columns: []
       - name: organization_lookup
         identifier: organization_lookup
         description: Linkedin Organization Details
-      
+
+        columns: []
       - name: total_follower_count
         identifier: total_follower_count
         description: Total Follower Count on Linked in
-  
+
+        columns: []
   - name: staging_zoho
     schema: staging_zoho
     tables:
       - name: campaign_recipients
         identifier: campaign_recipients
         description: Contains all the sent campaign emails and recipients
+        columns: []
       - name: campaign_reports
         identifier: campaign_reports
         description: Contains stats on sent out campaign emails
+        columns: []
       - name: recent_campaigns
         identifier: recent_campaigns
         description: Contains campaign details
-      
+
+        columns: []
       - name: mailing_lists
         identifier: mailing_lists
         description: Contains all the mailing lists for T4D
+        columns: []

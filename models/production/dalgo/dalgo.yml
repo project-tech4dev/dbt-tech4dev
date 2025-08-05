@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: consulting_tracker
+    columns: []
+  - name: support_issues
+    columns: []
+  - name: linkedin_stats
+    columns: []

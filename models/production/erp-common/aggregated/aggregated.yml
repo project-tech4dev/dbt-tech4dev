@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: kpi_nps_survey
+    columns: []
+  - name: kpi_opportunities
+    columns: []
+  - name: kpi_financials
+    columns: []
+  - name: kpi_projects
+    columns: []

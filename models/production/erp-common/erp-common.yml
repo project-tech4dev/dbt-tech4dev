@@ -1,0 +1,170 @@
+version: 2
+models:
+  - name: opportunities
+    columns: []
+  - name: monthly_digest
+    columns: []
+  - name: sales_invoice
+    columns: []
+  - name: projects
+    columns:
+      - name: name
+        description: Unique identifier for the project
+        config:
+          meta: {}
+          tags: []
+      - name: project_name
+        description: Name of the project
+        config:
+          meta: {}
+          tags: []
+      - name: status
+        description: Current status of the project
+        config:
+          meta: {}
+          tags: []
+      - name: expected_start_date
+        description: Expected project start date
+        config:
+          meta: {}
+          tags: []
+      - name: expected_end_date
+        description: Expected project end date
+        config:
+          meta: {}
+          tags: []
+    description: >-
+      This table contains information on projects, including their unique identifiers, current status,
+      and expected timelines, such as start and end dates.
+  - name: resource_allocation_metrics
+    columns:
+      - name: month_start_date
+        description: Start date of the allocation period
+        config:
+          meta: {}
+          tags: []
+      - name: month_end_date
+        description: The end date of the allocation period for a specific month.
+        config:
+          meta: {}
+          tags: []
+      - name: department
+        description: Department name
+        config:
+          meta: {}
+          tags: []
+      - name: employee_name
+        description: Name of the employee
+        config:
+          meta: {}
+          tags: []
+      - name: utilized_hours
+        description: The total hours utilized by a resource within a given allocation period.
+        config:
+          meta: {}
+          tags: []
+      - name: balance_hours
+        description: Remaining balance hours
+        config:
+          meta: {}
+          tags: []
+      - name: total_capacity
+        description: Total capacity in hours
+        config:
+          meta: {}
+          tags: []
+      - name: utilization_percentage
+        description: >-
+          The percentage of allocated hours utilized out of the total capacity for a given resource within
+          the specified period.
+        config:
+          meta: {}
+          tags: []
+      - name: dept_employee_count
+        description: Number of employees in the department for the given allocation period.
+        config:
+          meta: {}
+          tags: []
+      - name: dept_utilized_hours
+        description: The number of hours utilized by a department during the allocation period.
+        config:
+          meta: {}
+          tags: []
+      - name: dept_balance_hours
+        description: Remaining balance hours for the department within the allocation period.
+        config:
+          meta: {}
+          tags: []
+      - name: dept_total_capacity
+        description: Total capacity in hours for the department within the specified period.
+        config:
+          meta: {}
+          tags: []
+      - name: dept_avg_utilization
+        description: >-
+          Average utilization percentage of resources for a department within a specific period.
+        config:
+          meta: {}
+          tags: []
+    description: >-
+      The "resource_allocation_metrics" table provides monthly metrics on resource allocation, including
+      start and end dates, department and employee details, utilized hours, balance hours, total capacity,
+      utilization percentages, and departmental aggregates.
+  - name: resource_time_allocation
+    columns: []
+    description: >-
+      The "resource_time_allocation" table provides a detailed overview of resource time allocations,
+      including unique identifiers, employee details, department information, and time-based metrics such
+      as total and balance hours, capacity, and allocation periods.
+  - name: task_hierarchy
+    columns:
+      - name: level_1
+        description: >-
+          Indicates the top-level category or grouping of the task within the task hierarchy structure.
+        config:
+          meta: {}
+          tags: []
+      - name: level_2
+        description: >-
+          Represents the second level in the task hierarchy, which helps categorize tasks within a broader
+          structure.
+        config:
+          meta: {}
+          tags: []
+      - name: level_3
+        description: >-
+          Indicates the third level in the task hierarchy, representing a sub-category or further breakdown
+          of tasks within a project.
+        config:
+          meta: {}
+          tags: []
+      - name: level_4
+        description: >-
+          Fourth level in the task hierarchy, representing sub-tasks or components within the broader
+          task structure.
+        config:
+          meta: {}
+          tags: []
+      - name: status
+        description: Current status of the task
+        config:
+          meta: {}
+          tags: []
+      - name: project
+        description: Associated project identifier
+        config:
+          meta: {}
+          tags: []
+      - name: completion_float
+        description: >-
+          A numeric value representing the percentage of task completion within the task hierarchy.
+        config:
+          meta: {}
+          tags: []
+    description: >-
+      A table containing hierarchical task data with levels indicating the structure of tasks, their current
+      status, associated project, and a float representing task completion.
+  - name: resource_allocation
+    columns: []
+  - name: monthly_digest
+    columns: []

@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: int_campaign_recipients
+    columns: []
+  - name: int_campaign_reports
+    columns: []
+  - name: int_campaigns
+    columns: []
+  - name: int_mailing_lists
+    columns: []

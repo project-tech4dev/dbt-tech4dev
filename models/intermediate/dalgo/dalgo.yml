@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: int_consulting_tracker
+    columns: []
+  - name: int_support_issues
+    columns: []
+  - name: int_linkedin_follower_statistics
+    columns: []
+  - name: int_linkedin_share_statistics
+    columns: []
+  - name: int_linkedin_org_lookup
+    columns: []
+  - name: int_linkedin_follower_count
+    columns: []

@@ -1,0 +1,158 @@
+version: 2
+models:
+  - name: int_opportunities
+    columns: []
+  - name: int_tasks
+    columns:
+      - name: name
+        description: Unique identifier for the task
+        config:
+          meta: {}
+          tags: []
+      - name: subject
+        description: Task subject/title
+        config:
+          meta: {}
+          tags: []
+      - name: status
+        description: Current status of the task
+        config:
+          meta: {}
+          tags: []
+      - name: project
+        description: Associated project identifier
+        config:
+          meta: {}
+          tags: []
+      - name: parent_task
+        description: Parent task identifier
+        config:
+          meta: {}
+          tags: []
+    description: >-
+      A table containing project tasks with details such as unique task identifier, task subject/title,
+      current status, associated project, and parent task information.
+  - name: int_monthly_digest
+    columns: []
+  - name: int_sales_invoice
+    columns: []
+  - name: int_projects
+    columns: []
+    description: >-
+      This table contains information on projects, including their unique identifiers, current status,
+      and expected timelines.
+  - name: int_budget_actuals
+    columns: []
+  - name: int_resource_time_allocation
+    columns:
+      - name: idx
+        description: Unique identifier for the allocation.
+        config:
+          meta: {}
+          tags: []
+      - name: allocation_id
+        description: Unique identifier for the allocation.
+        config:
+          meta: {}
+          tags: []
+      - name: employee
+        description: Employee identifier
+        config:
+          meta: {}
+          tags: []
+      - name: employee_name
+        description: Name of the employee
+        config:
+          meta: {}
+          tags: []
+      - name: department
+        description: Department name
+        config:
+          meta: {}
+          tags: []
+      - name: total_hours
+        description: Total allocated hours
+        config:
+          meta: {}
+          tags: []
+      - name: balance_hours
+        description: Remaining balance hours
+        config:
+          meta: {}
+          tags: []
+      - name: total_capacity
+        description: Total capacity in hours
+        config:
+          meta: {}
+          tags: []
+      - name: month_start_date
+        description: Start date of the allocation period
+        config:
+          meta: {}
+          tags: []
+      - name: modified_date
+        description: Date when the record was last modified.
+        config:
+          meta: {}
+          tags: []
+      - name: month_number
+        description: >-
+          Numeric representation of the month for which the resource time allocation is recorded.
+        config:
+          meta: {}
+          tags: []
+      - name: year_number
+        description: Year of the resource time allocation.
+        config:
+          meta: {}
+          tags: []
+      - name: month_end_date
+        description: The end date of the allocation period for a specific month.
+        config:
+          meta: {}
+          tags: []
+    description: >-
+      The "int_resource_time_allocation" table provides a detailed overview of resource time allocations,
+      including unique identifiers, employee details, department information, and time-based metrics such
+      as total and balance hours, capacity, and allocation periods.
+  - name: int_task_hierarchy
+    columns:
+      - name: name
+        description: Unique identifier for the task
+        config:
+          meta: {}
+          tags: []
+      - name: subject
+        description: Task subject/title
+        config:
+          meta: {}
+          tags: []
+      - name: status
+        description: Current status of the task
+        config:
+          meta: {}
+          tags: []
+      - name: project_name
+        description: Name of the project
+        config:
+          meta: {}
+          tags: []
+      - name: parent_task
+        description: Parent task identifier
+        config:
+          meta: {}
+          tags: []
+      - name: path
+        description: >-
+          An array representing the hierarchical path of a task, detailing its position within the task
+          hierarchy.
+        config:
+          meta: {}
+          tags: []
+    description: >-
+      A table containing hierarchical task data with details such as task name, subject, current status,
+      associated project name, parent task, and task path information.
+  - name: int_resource_allocation
+    columns: []
+  - name: int_budget_actuals
+    columns: []
