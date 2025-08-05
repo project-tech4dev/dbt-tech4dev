@@ -657,10 +657,10 @@ sources:
                 severity: error
           - elementary.volume_anomalies:
               timestamp_column: _airbyte_extracted_at
-              anomaly_sensitivity: 3
+              anomaly_sensitivity: 1
           - elementary.freshness_anomalies:
               timestamp_column: _airbyte_extracted_at
-              anomaly_sensitivity: 3
+              anomaly_sensitivity: 1
         columns:
           - name: idx
             description: Index of the record
@@ -811,10 +811,10 @@ sources:
                 severity: error
           - elementary.volume_anomalies:
               timestamp_column: _airbyte_extracted_at
-              anomaly_sensitivity: 3
+              anomaly_sensitivity: 1
           - elementary.freshness_anomalies:
               timestamp_column: _airbyte_extracted_at
-              anomaly_sensitivity: 3
+              anomaly_sensitivity: 1
 
         columns: []
       - name: sales_invoice

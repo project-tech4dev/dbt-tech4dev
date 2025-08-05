@@ -12,13 +12,15 @@ WITH source AS (
 projects AS (
     SELECT
         name,
-        project_name
+        project_name,
+        status
     FROM
         {{ source('erp_next', 'tabProject') }}
 )
 SELECT
     s.project,
     p.project_name,
+    p.status,
     s.product_type,
     s.MONTH,
     s.YEAR,
