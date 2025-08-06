@@ -274,13 +274,3 @@ models:
         description: Start date of the allocation month
       - name: employee_name
         description: Name of the employee
-  - name: int_budget_actuals
-    columns:
-      - name: item
-        description: Budget item or category
-      - name: product_type
-        description: Product type associated with the budget
-      - name: financial_label
-        description: Financial period label (e.g., Q1 FY22)
-      - name: amount
-        description: Budget amount for the period
