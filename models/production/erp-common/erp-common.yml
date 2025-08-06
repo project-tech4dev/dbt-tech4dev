@@ -14,8 +14,6 @@ models:
         description: Timestamp when the opportunity was created
       - name: product_type
         description: Product type associated with the opportunity
-  - name: monthly_digest
-    columns: []
   - name: sales_invoice
     columns:
       - name: product_type
