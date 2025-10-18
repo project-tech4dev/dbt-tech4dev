@@ -4,8 +4,11 @@
 
 select
     o.name,
+    o.title,
     o.opportunity_type,
     o.status,
+    o.custom_opp_owner as opportunity_owner,
+    o.custom_conversion_date::date as conversion_date,
     o.creation::date as creation_date,
     o.creation as creation_timestamp,
     ptt.product_type as product_type
