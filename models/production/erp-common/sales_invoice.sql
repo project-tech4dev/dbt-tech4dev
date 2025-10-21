@@ -2,4 +2,4 @@
     tags = ['projects']
 ) }}
 
-select *, datediff(now(),due_date) as invoice_ageing from {{ref('int_sales_invoice')}}
+select *, (now() - due_date)::int as invoice_ageing from {{ref('int_sales_invoice')}}
