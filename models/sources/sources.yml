@@ -1,0 +1,17 @@
+version: 2
+sources:
+- name: staging_dalgo
+  schema: staging_dalgo
+  tables:
+  - name: consulting_time_tracker_anusha
+    identifier: consulting_time_tracker_anusha
+    description: ''
+  - name: consulting_time_tracker_pratiksha
+    identifier: consulting_time_tracker_pratiksha
+    description: ''
+  - name: consulting_time_tracker_ritabrata
+    identifier: consulting_time_tracker_ritabrata
+    description: ''
+  - name: consulting_time_tracker_siddhant
+    identifier: consulting_time_tracker_siddhant
+    description: ''

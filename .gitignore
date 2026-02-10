@@ -5,3 +5,13 @@ logs/
 venv/
 .DS_Store
 .python-version
+.venv/
+profiles/
+*/profiles.yml
+profiles.yaml
+.user.yml
+package-lock.yml
+.env*
+.env.local
+elementary_profiles/
+*.html
