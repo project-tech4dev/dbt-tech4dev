@@ -112,3 +112,7 @@ models:
     columns:
       - name: total_followers
         description: Total number of LinkedIn followers
+  - name: int_consulting_time_raw
+    description: Unioned raw consulting time tracker records from multiple Dalgo sources.
+  - name: int_consulting_time_clean
+    description: Cleaned and typed consulting time tracker records sourced from int_consulting_time_raw.
