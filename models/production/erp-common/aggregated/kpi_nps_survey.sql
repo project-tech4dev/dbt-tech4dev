@@ -17,11 +17,11 @@ nps_scores AS (
         cal.end_date,
         cal.period_type,
         COUNT(*) AS total_responses,
-        COUNT(CASE WHEN nps.recommend_program > 4.5 THEN 1 END) AS promoters,
+        COUNT(CASE WHEN nps.recommend_program >= 4.5 THEN 1 END) AS promoters,
         COUNT(CASE WHEN (nps.recommend_program >2 AND nps.recommend_program <4.5) THEN 1 END) AS neutrals,
         COUNT(CASE WHEN nps.recommend_program <= 2 THEN 1 END) AS detractors,
         ROUND(
-            ((COUNT(CASE WHEN nps.recommend_program = 4.5 THEN 1 END)::NUMERIC / COUNT(*)::NUMERIC * 100) -
+            ((COUNT(CASE WHEN nps.recommend_program >= 4.5 THEN 1 END)::NUMERIC / COUNT(*)::NUMERIC * 100) -
             (COUNT(CASE WHEN nps.recommend_program <= 2 THEN 1 END)::NUMERIC / COUNT(*)::NUMERIC * 100))::NUMERIC,
             2
         ) AS nps_score
