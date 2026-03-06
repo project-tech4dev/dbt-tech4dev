@@ -274,3 +274,28 @@ models:
         description: Start date of the allocation month
       - name: employee_name
         description: Name of the employee
+  - name: int_nps_survey
+    columns:
+      - name: name
+        description: Unique identifier for the NPS survey
+      - name: project
+        description: Project identifier
+      - name: form_filled_date
+        description: Date when the NPS survey form was filled
+      - name: avg_recommend_program
+        description: Recommendation for the program
+      - name: avg_program_outreach
+        description: Average score for program outreach
+      - name: avg_internal_capacity
+        description: Average score for internal capacity
+      - name: avg_confident_leverage
+        description: Average score for confident leverage
+      - name: avg_improved_efficiency
+        description: Average score for improved efficiency
+      - name: avg_technology_innovation
+        description: Average score for technology innovation
+      - name: avg_satisfaction_value_add
+        description: Average score for satisfaction value add
+    description: >-
+      A table containing averaged per org scores within a 3 month time frame 
+      for NPS data so that a time weighted score is generated per org.  

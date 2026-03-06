@@ -9,23 +9,24 @@ WITH calendar AS (
 
 -- NPS scores calculation (recommend_program: 1-5 scale)
 -- NPS = (% of promoters - % of detractors) * 100
--- Promoters: score 5, Neutrals: score 3-4, Detractors: score 1-2
+-- Promoters: score 4.5+, Neutrals: score 2-4.5, Detractors: score 1-2 
+-- Decimals occur if same org has multiple response in same year
 nps_scores AS (
     SELECT
         cal.start_date,
         cal.end_date,
         cal.period_type,
         COUNT(*) AS total_responses,
-        COUNT(CASE WHEN nps.recommend_program = 5 THEN 1 END) AS promoters,
-        COUNT(CASE WHEN nps.recommend_program BETWEEN 3 AND 4 THEN 1 END) AS neutrals,
+        COUNT(CASE WHEN nps.recommend_program > 4.5 THEN 1 END) AS promoters,
+        COUNT(CASE WHEN (nps.recommend_program >2 AND nps.recommend_program <4.5) THEN 1 END) AS neutrals,
         COUNT(CASE WHEN nps.recommend_program <= 2 THEN 1 END) AS detractors,
         ROUND(
-            ((COUNT(CASE WHEN nps.recommend_program = 5 THEN 1 END)::NUMERIC / COUNT(*)::NUMERIC * 100) -
+            ((COUNT(CASE WHEN nps.recommend_program = 4.5 THEN 1 END)::NUMERIC / COUNT(*)::NUMERIC * 100) -
             (COUNT(CASE WHEN nps.recommend_program <= 2 THEN 1 END)::NUMERIC / COUNT(*)::NUMERIC * 100))::NUMERIC,
             2
         ) AS nps_score
     FROM calendar cal
-    JOIN {{ source('erp_next', 'tabNPS_Survey') }} nps
+    JOIN {{ ref('int_nps_survey') }} nps
       ON nps.form_filled_date::date BETWEEN cal.start_date AND cal.end_date
     WHERE nps.recommend_program IS NOT NULL
       AND nps.recommend_program BETWEEN 1 AND 5
