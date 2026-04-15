@@ -47,10 +47,11 @@ projects_ended AS (
     JOIN {{ ref('projects') }} p
       ON p.expected_end_date BETWEEN cal.start_date AND cal.end_date
     GROUP BY cal.start_date, cal.end_date, cal.period_type,p.product_type
-)
+),
 
 -- Final union of metrics
-SELECT
+final AS (
+  SELECT
     cal.start_date,
     cal.end_date,
     cal.period_type,
@@ -61,12 +62,18 @@ SELECT
     COALESCE(po.projects_ongoing, 0) AS projects_ongoing,
     COALESCE(pe.projects_ended, 0) AS projects_ended
 
-FROM calendar cal
-LEFT JOIN projects_started ps
-  ON ps.start_date = cal.start_date AND ps.period_type = cal.period_type
-LEFT JOIN projects_ongoing po
-  ON po.start_date = cal.start_date AND po.period_type = cal.period_type AND po.product_type = ps.product_type
-LEFT JOIN projects_ended pe
-  ON pe.start_date = cal.start_date AND pe.period_type = cal.period_type AND pe.product_type = ps.product_type
+  FROM calendar cal
+  LEFT JOIN projects_started ps
+    ON ps.start_date = cal.start_date AND ps.period_type = cal.period_type
+  LEFT JOIN projects_ongoing po
+    ON po.start_date = cal.start_date AND po.period_type = cal.period_type AND po.product_type = ps.product_type
+  LEFT JOIN projects_ended pe
+    ON pe.start_date = cal.start_date AND pe.period_type = cal.period_type AND pe.product_type = ps.product_type
+)
 
-ORDER BY cal.start_date, product_type
+SELECT *,SUM(projects_started) OVER (
+        PARTITION BY product_type, period_type
+        ORDER BY start_date
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS cumulative_projects_started FROM final
+ORDER BY start_date, product_type
