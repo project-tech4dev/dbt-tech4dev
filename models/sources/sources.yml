@@ -15,3 +15,13 @@ sources:
   - name: consulting_time_tracker_siddhant
     identifier: consulting_time_tracker_siddhant
     description: ''
+
+- name: bizdev_automation
+  schema: bizdev_automation
+  tables:
+  - name: Combined
+    identifier: Combined
+    description: ''
+  - name: NGO_Research
+    identifier: NGO_Research
+    description: ''
