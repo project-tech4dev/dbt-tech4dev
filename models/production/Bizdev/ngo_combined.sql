@@ -19,10 +19,10 @@ final as (
             when "Total_Revenue__FY___"::numeric > 200000000   then '>20Cr'
             when "Total_Revenue__FY___"::numeric >= 100000000  then '10-20Cr'
             when "Total_Revenue__FY___"::numeric >= 70000000   then '7-10Cr'
-            when "Total_Revenue__FY___"::numeric >= 40000000   then '4-70Cr'
+            when "Total_Revenue__FY___"::numeric >= 40000000   then '4-7Cr'
             when "Total_Revenue__FY___"::numeric >= 10000000   then '1-4Cr'
-            when "Total_Revenue__FY___"::numeric >= 0   then'<1Cr'
-            else null
+            when "Total_Revenue__FY___"::numeric > 0   then'<1Cr'
+            else 'N/A'
         end as revenue_category
 
     from source
