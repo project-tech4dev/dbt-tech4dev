@@ -1,7 +1,7 @@
 --DBT AUTOMATION has generated this model, please DO NOT EDIT 
 --Please make sure you dont change the model name 
 
-{{ config(materialized='table', schema='intermediate', tags=["consulting", "dalgo"]) }}
+{{ config(materialized='table', schema='intermediate', tags=["consulting", "dalgo", "dalgo_consulting"]) }}
 WITH cte1 as (
 {{ dbt_utils.union_relations(relations=[source('staging_dalgo', 'consulting_time_tracker_anusha'),
 source('staging_dalgo', 'consulting_time_tracker_pratiksha'),

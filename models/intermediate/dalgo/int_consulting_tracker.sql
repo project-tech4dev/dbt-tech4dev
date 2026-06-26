@@ -1,6 +1,6 @@
 {{ config(
   materialized='table',
-  tags=["consulting", "dalgo"]
+  tags=["consulting", "dalgo", "dalgo_consulting"]
 ) }}
 
 SELECT

@@ -1,7 +1,7 @@
 --DBT AUTOMATION has generated this model, please DO NOT EDIT 
 --Please make sure you dont change the model name 
 
-{{ config(materialized='table', schema='intermediate', tags=["consulting", "dalgo"]) }}
+{{ config(materialized='table', schema='intermediate', tags=["consulting", "dalgo", "dalgo_consulting"]) }}
 WITH cte2 as (
 SELECT
 CAST("ngo" AS text) AS "ngo",
