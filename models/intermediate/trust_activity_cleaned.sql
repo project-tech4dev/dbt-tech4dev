@@ -7,7 +7,7 @@ SELECT
 CAST("Date" AS character varying) AS "Date",
 CAST("Name" AS character varying) AS "Name",
 CAST("Time" AS character varying) AS "Time",
-CAST("Amount" AS character varying) AS "Amount",
+CAST("Amount" AS numeric) AS "Amount",
 CAST("Minutes" AS numeric) AS "Minutes",
 CAST("Sr__No_" AS character varying) AS "Sr__No_",
 CAST("Time_taken" AS character varying) AS "Time_taken",
