@@ -15,7 +15,6 @@ sources:
   - name: consulting_time_tracker_siddhant
     identifier: consulting_time_tracker_siddhant
     description: ''
-
 - name: bizdev_automation
   schema: bizdev_automation
   tables:
@@ -24,4 +23,10 @@ sources:
     description: ''
   - name: NGO_Research
     identifier: NGO_Research
+    description: ''
+- name: staging
+  schema: staging
+  tables:
+  - name: Sheet2
+    identifier: Sheet2
     description: ''
