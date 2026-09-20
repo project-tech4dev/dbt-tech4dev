@@ -30,3 +30,6 @@ sources:
   - name: Sheet2
     identifier: Sheet2
     description: ''
+  - name: trust_activity_raw
+    identifier: trust_activity_raw
+    description: ''
