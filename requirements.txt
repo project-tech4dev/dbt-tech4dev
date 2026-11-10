@@ -1,4 +1,4 @@
-sqlfluff==3.2.5 
+sqlfluff==4.2.0 
 dbt-postgres==1.7.17
 sqlfluff-templater-dbt==3.2.5
 dbt-osmosis[openai]
